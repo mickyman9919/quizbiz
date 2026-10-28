@@ -1,0 +1,17 @@
+# Render Blueprint — กด "New > Blueprint" บน render.com แล้วเลือก repo นี้
+services:
+  - type: web
+    name: quizblitz
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ADMIN_PASSWORD
+        sync: false # Render จะให้กรอกตอนสร้าง
+      - key: DATABASE_URL
+        sync: false # ใส่ connection string ของ Neon/Supabase (Postgres)
