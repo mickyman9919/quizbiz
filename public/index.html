@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizBlitz</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="center-screen">
+    <div class="card join-card">
+      <div class="logo">Quiz<span>Blitz</span></div>
+      <form action="/play" method="get">
+        <input class="big-input" name="pin" inputmode="numeric" pattern="\d{6}" maxlength="6" placeholder="Game PIN" required autocomplete="off">
+        <button class="btn btn-primary btn-block btn-lg">เข้าร่วมเกม</button>
+      </form>
+      <div class="home-links"><a href="/admin">สร้างและจัดการแบบทดสอบ →</a></div>
+    </div>
+  </div>
+</body>
+</html>
